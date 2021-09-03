@@ -762,7 +762,7 @@ Mesh::Mesh(ParameterInput *pin, IOWrapper& resfile, int mesh_test) :
   }
 
   // read the ID list
-  listsize = sizeof(LogicalLocation)+sizeof(Real);
+  listsize = sizeof(LogicalLocation)+sizeof(double);
   //allocate the idlist buffer
   char *idlist = new char[listsize*nbtotal];
   if (Globals::my_rank == 0) { // only the master process reads the ID list
